@@ -10,8 +10,6 @@ To install the CLI tool, you can use the following commands:
 go get -u github.com/mrkouhadi/go-cli
 ```
 
-````
-
 Make sure your Go environment is properly set up.
 
 ## Usage
@@ -77,4 +75,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-````
+
+```
+
+```
