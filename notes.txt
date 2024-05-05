@@ -1,0 +1,51 @@
+- initial  a project: cobra-cli init go-cli 
+- add a command file boilerplate: cobra-cli add ping
+
+- command and subcommands:
+    - in cmd folder we create a folder (commands) and inside it we create other sub folders (subcommands)
+    - in command file:
+        -var InfoCmd = &cobra.Command{
+            Use:   "info",
+            Short: "info is a pallete that contains commands to get info of CPU, RAM, and DISK usage",
+            Long:  ``,
+            Run: func(cmd *cobra.Command, args []string) { // when run: go run main.go info 
+                // logic here
+            },
+        }
+        func init() {}
+
+
+    - in each subcommand file: 
+        var cpuCmd = &cobra.Command{
+            Use:   "cpu",
+            Short: "shor desc of your sub command",
+            Long:  ``,
+            Run: func(cmd *cobra.Command, args []string) {// when run: go run main.go info cpu
+                // LOGIC HERE
+            },
+        }
+
+        func init() {
+            // Here you will define your flags and configuration settings.
+            InfoCmd.AddCommand(cpuCmd)
+        }
+
+- add a flag : go inti() function and 
+	write this in init(): pingCmd.Flags().StringVarP(&urlPath, "url", "u", "", "The url to ping")
+    output: -u, --url string   the url to ping
+        var url string
+        var cpuCmd = &cobra.Command{
+            Use:   "cpu",
+            Short: "shor desc of your sub command",
+            Long:  ``,
+            Run: func(cmd *cobra.Command, args []string) {// when run: go run main.go info cpu
+                // here we can the variable decalred above and use it for our logic here:::::
+            },
+        }
+
+        func init() {
+            // define flags
+            cpuCmd.Flags().StringVarP(&urlPath, "url", "u", "", "The url to ping") // --url or -u
+
+            InfoCmd.AddCommand(cpuCmd)
+        }
