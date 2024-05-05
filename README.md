@@ -1,5 +1,3 @@
-Sure, here's the content in Markdown format:
-
 ````markdown
 # CLI Usage Details
 
