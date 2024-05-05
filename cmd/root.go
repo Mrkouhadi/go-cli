@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/mrkouhadi/go-cli/cmd/info"
@@ -15,12 +14,8 @@ var rootCmd = &cobra.Command{
 	Short: "Display the Usage of CPU, RAM, DISK, and NETWORK.",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		toggle, _ := cmd.Flags().GetBool("toggle")
-		if toggle {
-			fmt.Println("Toggling...")
-		} else {
-			fmt.Println("Toggle is off")
-		}
+		// Display usage information if no command is specified
+		cmd.Usage()
 	},
 }
 
@@ -37,7 +32,7 @@ func AddSubCommandsPalletes() {
 }
 
 func init() {
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	_ = rootCmd.PersistentFlags().Parse(os.Args[1:]) // Parse flags before adding subcommands
 
 	AddSubCommandsPalletes()
