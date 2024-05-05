@@ -1,4 +1,3 @@
-````markdown
 # CLI Usage Details
 
 This is a command-line interface (CLI) tool built in Golang. It provides users with various commands to retrieve system information such as CPU usage, RAM usage, disk usage, network details, and more.
@@ -10,6 +9,7 @@ To install the CLI tool, you can use the following commands:
 ```bash
 go get -u github.com/mrkouhadi/go-cli
 ```
+
 ````
 
 Make sure your Go environment is properly set up.
@@ -77,3 +77,4 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+````
