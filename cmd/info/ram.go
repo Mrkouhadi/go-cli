@@ -8,7 +8,6 @@ import (
 )
 
 // subCOMMAND
-
 // ramCmd represents the ram command
 var ramCmd = &cobra.Command{
 	Use:   "ram",

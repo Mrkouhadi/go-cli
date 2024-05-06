@@ -2,8 +2,10 @@ package info
 
 import (
 	"fmt"
+
 	"github.com/spf13/cobra"
 )
+
 // COMMAND
 // infoCmd represents the info command
 var InfoCmd = &cobra.Command{
@@ -15,6 +17,8 @@ var InfoCmd = &cobra.Command{
 		fmt.Println(" - CPU usage: go-cli info cpu")
 		fmt.Println(" - RAM usage: go-cli info ram")
 		fmt.Println(" - DISK usage: go-cli info disk")
+		fmt.Println(" - DISK usage: go-cli info gpu")
 	},
 }
+
 func init() {}
