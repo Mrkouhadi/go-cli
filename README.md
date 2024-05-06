@@ -68,6 +68,14 @@ To retrieve disk usage details:
 go-cli info disk
 ```
 
+### GPU Usage
+
+To retrieve GPU usage details:
+
+```bash
+go-cli info gpu
+```
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request on GitHub.
