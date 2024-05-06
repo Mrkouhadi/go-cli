@@ -2,10 +2,8 @@ package info
 
 import (
 	"fmt"
-
 	"github.com/spf13/cobra"
 )
-
 // COMMAND
 // infoCmd represents the info command
 var InfoCmd = &cobra.Command{
@@ -19,5 +17,4 @@ var InfoCmd = &cobra.Command{
 		fmt.Println(" - DISK usage: go-cli info disk")
 	},
 }
-
 func init() {}

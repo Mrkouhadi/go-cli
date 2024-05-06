@@ -6,9 +6,7 @@ import (
 	"github.com/shirou/gopsutil/v3/disk"
 	"github.com/spf13/cobra"
 )
-
 // subCOMMAND
-
 // diskCmd represents the disk command
 var diskCmd = &cobra.Command{
 	Use:   "disk",
@@ -23,7 +21,6 @@ var diskCmd = &cobra.Command{
 		fmt.Printf("Free Disk Space: %.2f GB\n", float64(usage.Free)/1024/1024/1024)
 	},
 }
-
 func init() {
 	// Here you will define your flags and configuration settings.
 	InfoCmd.AddCommand(diskCmd)

@@ -6,7 +6,6 @@ import (
 	"github.com/shirou/gopsutil/v3/cpu"
 	"github.com/spf13/cobra"
 )
-
 // subCOMMAND
 // cpuCmd represents the cpu command
 var cpuCmd = &cobra.Command{
@@ -31,7 +30,6 @@ var cpuCmd = &cobra.Command{
 		}
 	},
 }
-
 func init() {
 	// Here you will define your flags and configuration settings.
 	InfoCmd.AddCommand(cpuCmd)
