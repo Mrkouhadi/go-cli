@@ -40,6 +40,8 @@ var pingCmd = &cobra.Command{
 	Short: "ping pings a remote URL",
 	Long:  `ping command pings the specified URL and returns the HTTP status code along with a message.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println()
+
 		// Start spinner
 		color.Cyan("Processing your request...")
 		s := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
@@ -66,6 +68,7 @@ var pingCmd = &cobra.Command{
 				color.Blue("Received HTTP Status Code: %d", statusCode)
 			}
 		}
+		fmt.Println()
 
 		color.Green("DONE!")
 	},

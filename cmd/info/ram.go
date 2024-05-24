@@ -32,8 +32,8 @@ var ramCmd = &cobra.Command{
 		color.Green(" - RAM Usage: %.2f%%", memInfo.UsedPercent)
 		// Stop spinner and print completion message
 		s.Stop()
-		color.Green("DONE!")
 		fmt.Println()
+		color.Green("DONE!")
 	},
 }
 

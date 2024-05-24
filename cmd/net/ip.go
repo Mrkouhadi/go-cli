@@ -19,6 +19,7 @@ var IPCmd = &cobra.Command{
 	Short: "Get IP Address",
 	Long:  `ip command retrieves and displays the IP addresses of the host, filtered by the specified network version (IPv4 or IPv6).`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println()
 		// Start spinner
 		color.Cyan("Processing your request...")
 		s := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
@@ -67,6 +68,7 @@ var IPCmd = &cobra.Command{
 
 		// Stop spinner
 		s.Stop()
+		fmt.Println()
 		color.Green("DONE!")
 	},
 }

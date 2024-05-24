@@ -10,8 +10,8 @@ import (
 // NetCmd represents the net command
 var NetCmd = &cobra.Command{
 	Use:   "net",
-	Short: "net is a palette that contains network-based commands: network details and IP addresses",
-	Long:  `net command provides a collection of subcommands to retrieve network details, IP addresses, and perform network operations such as pinging a URL.`,
+	Short: "is a collection of network-based subcommands: network details and IP addresses",
+	Long:  `provides a collection of network-based subcommands to retrieve network details, IP addresses, and perform network operations such as pinging a URL.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println()
 		color.Cyan("Please specify what command you want to run.")

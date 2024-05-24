@@ -36,8 +36,8 @@ var gpuCmd = &cobra.Command{
 		}
 		// Stop spinner and print completion message
 		s.Stop()
-		color.Green("DONE!")
 		fmt.Println()
+		color.Green("DONE!")
 	},
 }
 

@@ -16,6 +16,7 @@ var INFOCmd = &cobra.Command{
 	Short: "Get all network details",
 	Long:  `info command retrieves and displays detailed information about all network interfaces on the system.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println()
 		// Start spinner
 		color.Cyan("Processing your request...")
 		s := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
@@ -51,6 +52,7 @@ var INFOCmd = &cobra.Command{
 
 		// Stop spinner
 		s.Stop()
+		fmt.Println()
 		color.Green("DONE!")
 	},
 }
