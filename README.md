@@ -16,6 +16,14 @@ Make sure your Go environment is properly set up.
 
 Once installed, you can use the CLI tool with the following commands:
 
+### App Version
+
+To get version of the running app
+
+```bash
+go-cli --version
+```
+
 ### IP Addresses
 
 To retrieve IP addresses:
