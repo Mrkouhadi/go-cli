@@ -3,19 +3,28 @@ package net
 import (
 	"fmt"
 
+	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
 
 // NetCmd represents the net command
 var NetCmd = &cobra.Command{
 	Use:   "net",
-	Short: "Net is a pallete that contains network based commands:netwrok detaisl and IP Adresses",
-	Long:  ``,
+	Short: "net is a palette that contains network-based commands: network details and IP addresses",
+	Long:  `net command provides a collection of subcommands to retrieve network details, IP addresses, and perform network operations such as pinging a URL.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Please specify what command do you want. ")
-		fmt.Println(" - IP Addresses: go-cli net ip -v ipv4 / go-cli net ip -v ipv6")
-		fmt.Println(" - Network Details: go-cli net info")
-		fmt.Println(" - Ping a url: go-cli net ping -u google.com")
+		fmt.Println()
+		color.Cyan("Please specify what command you want to run.")
+		fmt.Println()
+		color.Yellow("Available Commands:")
+		fmt.Println(" - IP Addresses:")
+		color.Green("   go-cli net ip -v ipv4")
+		color.Green("   go-cli net ip -v ipv6")
+		fmt.Println(" - Network Details:")
+		color.Green("   go-cli net info")
+		fmt.Println(" - Ping a URL:")
+		color.Green("   go-cli net ping -u brifel.com")
+		fmt.Println()
 	},
 }
 

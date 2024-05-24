@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
+	"github.com/fatih/color"
 	"github.com/mrkouhadi/go-cli/cmd/info"
 	"github.com/mrkouhadi/go-cli/cmd/net"
 	"github.com/spf13/cobra"
@@ -16,7 +16,7 @@ var version = "1.0.0"
 var rootCmd = &cobra.Command{
 	Use:   "go-cli",
 	Short: "Display the Usage of CPU, RAM, DISK, and NETWORK.",
-	Long:  ``,
+	Long:  `go-cli is a command line interface to display the usage of CPU, RAM, DISK, and NETWORK.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		// Display usage information if no command is specified
 		cmd.Usage()
@@ -25,7 +25,7 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	if err := rootCmd.Execute(); err != nil {
-		fmt.Println(err)
+		color.Red("Error: %v", err)
 		os.Exit(1)
 	}
 }
@@ -36,19 +36,17 @@ func AddSubCommandsPalletes() {
 }
 
 func init() {
-	// rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
-	_ = rootCmd.PersistentFlags().Parse(os.Args[1:]) // Parse flags before adding subcommands
 	// getting the version
 	rootCmd.PersistentFlags().BoolP("version", "v", false, "Print the version number of go-cli")
 	cobra.OnInitialize(func() {
 		// Check if the version flag is set
 		versionFlag, err := rootCmd.Flags().GetBool("version")
 		if err != nil {
-			fmt.Println(err)
+			color.Red("Error: %v", err)
 			os.Exit(1)
 		}
 		if versionFlag {
-			fmt.Println("go-cli version:", version)
+			color.Green("go-cli version: %s", version)
 			os.Exit(0)
 		}
 	})
