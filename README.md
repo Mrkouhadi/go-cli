@@ -18,7 +18,9 @@ Once installed, you can use the CLI tool with the following commands:
 
 ### App Version
 
-To get version of the running app
+This application follows Semantic Versioning. The current version is `1.0.0`.
+
+To check the version of your installed go-cli
 
 ```bash
 go-cli --version
