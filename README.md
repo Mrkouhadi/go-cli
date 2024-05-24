@@ -2,6 +2,12 @@
 
 This is a command-line interface (CLI) tool built in Golang. It provides users with various commands to retrieve system information such as CPU usage, RAM usage, disk usage, network details, and more.
 
+## Preview
+
+![Net Image](net.png)
+![RAM CPU Image](ram-cpu.png)
+![Info Image](info.png)
+
 ## Installation
 
 To install the CLI tool, you can use the following commands:
